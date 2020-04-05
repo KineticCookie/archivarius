@@ -1,7 +1,13 @@
+# Archivarius
 
-# Parsing
+The documentation renderer based on [sbt-paradox](https://github.com/lightbend/paradox).
 
-## Get ast from proto files
+Since it's not supported anymore I decided to migrate it to scala 2.13 and improve by adding
+new directives.
+
+## Parsing proto schema
+
+### Get ast from proto files
 pwd is hydro-serving-protos repository
 
 ```
