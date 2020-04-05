@@ -1,0 +1,12 @@
+umbrella:
+  name: super-project
+  docs:
+    - kind: markdown
+      path: README.MD
+    - kind: markdown
+      path: docs/
+  projects:
+    - path: ../test-project/docs.yaml
+    - git:
+        repo: git@github.com:Hydrospheredata/hydro-serving-cli.git
+        path: docs.yaml

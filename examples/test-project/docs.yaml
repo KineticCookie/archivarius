@@ -1,0 +1,13 @@
+project:
+  name: test
+  api:
+    - kind: openapi
+      path: docs/openapi.yaml
+    - kind: grpc
+      service: hydrosphere.manager.ManagerService
+      git:
+        repo: git@github.com:Hydrospheredata/hydro-serving-protos.git
+        path: src/hydro_serving_grpc/
+  docs:
+    - kind: markdown
+      path: docs/

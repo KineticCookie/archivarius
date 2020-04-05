@@ -1,0 +1,3860 @@
+{
+  "files": [
+    {
+      "name": "hydro_serving_grpc/contract/model_signature.proto",
+      "description": "",
+      "package": "hydrosphere.contract",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "ModelSignature",
+          "longName": "ModelSignature",
+          "fullName": "hydrosphere.contract.ModelSignature",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "signature_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "inputs",
+              "description": "",
+              "label": "repeated",
+              "type": "ModelField",
+              "longType": "ModelField",
+              "fullType": "hydrosphere.contract.ModelField",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "outputs",
+              "description": "",
+              "label": "repeated",
+              "type": "ModelField",
+              "longType": "ModelField",
+              "fullType": "hydrosphere.contract.ModelField",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    },
+    {
+      "name": "hydro_serving_grpc/contract/model_field.proto",
+      "description": "",
+      "package": "hydrosphere.contract",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "ModelField",
+          "longName": "ModelField",
+          "fullName": "hydrosphere.contract.ModelField",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "shape",
+              "description": "",
+              "label": "",
+              "type": "TensorShapeProto",
+              "longType": "hydrosphere.tensorflow.TensorShapeProto",
+              "fullType": "hydrosphere.tensorflow.TensorShapeProto",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "subfields",
+              "description": "",
+              "label": "",
+              "type": "Subfield",
+              "longType": "ModelField.Subfield",
+              "fullType": "hydrosphere.contract.ModelField.Subfield",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "dtype",
+              "description": "",
+              "label": "",
+              "type": "DataType",
+              "longType": "hydrosphere.tensorflow.DataType",
+              "fullType": "hydrosphere.tensorflow.DataType",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "profile",
+              "description": "",
+              "label": "",
+              "type": "DataProfileType",
+              "longType": "DataProfileType",
+              "fullType": "hydrosphere.contract.DataProfileType",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Subfield",
+          "longName": "ModelField.Subfield",
+          "fullName": "hydrosphere.contract.ModelField.Subfield",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "data",
+              "description": "",
+              "label": "repeated",
+              "type": "ModelField",
+              "longType": "ModelField",
+              "fullType": "hydrosphere.contract.ModelField",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    },
+    {
+      "name": "hydro_serving_grpc/contract/data_profile_types.proto",
+      "description": "",
+      "package": "hydrosphere.contract",
+      "hasEnums": true,
+      "hasExtensions": false,
+      "hasMessages": false,
+      "hasServices": false,
+      "enums": [
+        {
+          "name": "DataProfileType",
+          "longName": "DataProfileType",
+          "fullName": "hydrosphere.contract.DataProfileType",
+          "description": "",
+          "values": [
+            {
+              "name": "NONE",
+              "number": "0",
+              "description": ""
+            },
+            {
+              "name": "CATEGORICAL",
+              "number": "1",
+              "description": ""
+            },
+            {
+              "name": "NOMINAL",
+              "number": "11",
+              "description": ""
+            },
+            {
+              "name": "ORDINAL",
+              "number": "12",
+              "description": ""
+            },
+            {
+              "name": "NUMERICAL",
+              "number": "2",
+              "description": ""
+            },
+            {
+              "name": "CONTINUOUS",
+              "number": "21",
+              "description": ""
+            },
+            {
+              "name": "INTERVAL",
+              "number": "22",
+              "description": ""
+            },
+            {
+              "name": "RATIO",
+              "number": "23",
+              "description": ""
+            },
+            {
+              "name": "IMAGE",
+              "number": "3",
+              "description": ""
+            },
+            {
+              "name": "VIDEO",
+              "number": "4",
+              "description": ""
+            },
+            {
+              "name": "AUDIO",
+              "number": "5",
+              "description": ""
+            },
+            {
+              "name": "TEXT",
+              "number": "6",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "extensions": [],
+      "messages": [],
+      "services": []
+    },
+    {
+      "name": "hydro_serving_grpc/contract/model_contract.proto",
+      "description": "",
+      "package": "hydrosphere.contract",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "ModelContract",
+          "longName": "ModelContract",
+          "fullName": "hydrosphere.contract.ModelContract",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "model_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "predict",
+              "description": "",
+              "label": "",
+              "type": "ModelSignature",
+              "longType": "ModelSignature",
+              "fullType": "hydrosphere.contract.ModelSignature",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    },
+    {
+      "name": "hydro_serving_grpc/reqstore/reqstore_service.proto",
+      "description": "",
+      "package": "hydrosphere.reqstore",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": true,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "Data",
+          "longName": "Data",
+          "fullName": "hydrosphere.reqstore.Data",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "id",
+              "description": "",
+              "label": "",
+              "type": "ID",
+              "longType": "ID",
+              "fullType": "hydrosphere.reqstore.ID",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "data",
+              "description": "",
+              "label": "",
+              "type": "bytes",
+              "longType": "bytes",
+              "fullType": "bytes",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "GetRequest",
+          "longName": "GetRequest",
+          "fullName": "hydrosphere.reqstore.GetRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "timestamp",
+              "description": "",
+              "label": "",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "unique",
+              "description": "",
+              "label": "",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "folder",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ID",
+          "longName": "ID",
+          "fullName": "hydrosphere.reqstore.ID",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "timestamp",
+              "description": "",
+              "label": "",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "unique",
+              "description": "",
+              "label": "",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "PeriodSubsampleRequest",
+          "longName": "PeriodSubsampleRequest",
+          "fullName": "hydrosphere.reqstore.PeriodSubsampleRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "from",
+              "description": "",
+              "label": "",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "till",
+              "description": "",
+              "label": "",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "RangeRequest",
+          "longName": "RangeRequest",
+          "fullName": "hydrosphere.reqstore.RangeRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "from",
+              "description": "",
+              "label": "",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "till",
+              "description": "",
+              "label": "",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "folder",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "reverse",
+              "description": "",
+              "label": "",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "maxMessages",
+              "description": "",
+              "label": "",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "maxBytes",
+              "description": "",
+              "label": "",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "SaveRequest",
+          "longName": "SaveRequest",
+          "fullName": "hydrosphere.reqstore.SaveRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "folder",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "useWAL",
+              "description": "",
+              "label": "",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "data",
+              "description": "",
+              "label": "",
+              "type": "bytes",
+              "longType": "bytes",
+              "fullType": "bytes",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "timestamp",
+              "description": "",
+              "label": "",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "SubsampleRequest",
+          "longName": "SubsampleRequest",
+          "fullName": "hydrosphere.reqstore.SubsampleRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "amount",
+              "description": "",
+              "label": "",
+              "type": "uint32",
+              "longType": "uint32",
+              "fullType": "uint32",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "folder",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "batch_size",
+              "description": "",
+              "label": "",
+              "type": "uint32",
+              "longType": "uint32",
+              "fullType": "uint32",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "type",
+              "description": "",
+              "label": "",
+              "type": "SubsampleRequestType",
+              "longType": "SubsampleRequestType",
+              "fullType": "hydrosphere.reqstore.SubsampleRequestType",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "SubsampleRequestType",
+          "longName": "SubsampleRequestType",
+          "fullName": "hydrosphere.reqstore.SubsampleRequestType",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "total_request",
+              "description": "",
+              "label": "",
+              "type": "TotalSubsampleRequest",
+              "longType": "TotalSubsampleRequest",
+              "fullType": "hydrosphere.reqstore.TotalSubsampleRequest",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "period_request",
+              "description": "",
+              "label": "",
+              "type": "PeriodSubsampleRequest",
+              "longType": "PeriodSubsampleRequest",
+              "fullType": "hydrosphere.reqstore.PeriodSubsampleRequest",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "TotalSubsampleRequest",
+          "longName": "TotalSubsampleRequest",
+          "fullName": "hydrosphere.reqstore.TotalSubsampleRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": false,
+          "extensions": [],
+          "fields": []
+        }
+      ],
+      "services": [
+        {
+          "name": "Timemachine",
+          "longName": "Timemachine",
+          "fullName": "hydrosphere.reqstore.Timemachine",
+          "description": "",
+          "methods": [
+            {
+              "name": "Save",
+              "description": "",
+              "requestType": "SaveRequest",
+              "requestLongType": "SaveRequest",
+              "requestFullType": "hydrosphere.reqstore.SaveRequest",
+              "requestStreaming": false,
+              "responseType": "ID",
+              "responseLongType": "ID",
+              "responseFullType": "hydrosphere.reqstore.ID",
+              "responseStreaming": false
+            },
+            {
+              "name": "Get",
+              "description": "",
+              "requestType": "GetRequest",
+              "requestLongType": "GetRequest",
+              "requestFullType": "hydrosphere.reqstore.GetRequest",
+              "requestStreaming": false,
+              "responseType": "Data",
+              "responseLongType": "Data",
+              "responseFullType": "hydrosphere.reqstore.Data",
+              "responseStreaming": false
+            },
+            {
+              "name": "GetRange",
+              "description": "",
+              "requestType": "RangeRequest",
+              "requestLongType": "RangeRequest",
+              "requestFullType": "hydrosphere.reqstore.RangeRequest",
+              "requestStreaming": false,
+              "responseType": "Data",
+              "responseLongType": "Data",
+              "responseFullType": "hydrosphere.reqstore.Data",
+              "responseStreaming": true
+            },
+            {
+              "name": "GetSubsample",
+              "description": "",
+              "requestType": "SubsampleRequest",
+              "requestLongType": "SubsampleRequest",
+              "requestFullType": "hydrosphere.reqstore.SubsampleRequest",
+              "requestStreaming": false,
+              "responseType": "Data",
+              "responseLongType": "Data",
+              "responseFullType": "hydrosphere.reqstore.Data",
+              "responseStreaming": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hydro_serving_grpc/manager/serving.proto",
+      "description": "",
+      "package": "hydrosphere.discovery",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": true,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "ApplicationDiscoveryEvent",
+          "longName": "ApplicationDiscoveryEvent",
+          "fullName": "hydrosphere.discovery.ApplicationDiscoveryEvent",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "removedIds",
+              "description": "",
+              "label": "repeated",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "added",
+              "description": "",
+              "label": "repeated",
+              "type": "ServingApp",
+              "longType": "hydrosphere.manager.ServingApp",
+              "fullType": "hydrosphere.manager.ServingApp",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "MetricSpecDiscoveryEvent",
+          "longName": "MetricSpecDiscoveryEvent",
+          "fullName": "hydrosphere.discovery.MetricSpecDiscoveryEvent",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "removedIdx",
+              "description": "",
+              "label": "repeated",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "added",
+              "description": "",
+              "label": "repeated",
+              "type": "MetricSpec",
+              "longType": "hydrosphere.manager.MetricSpec",
+              "fullType": "hydrosphere.manager.MetricSpec",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ServableDiscoveryEvent",
+          "longName": "ServableDiscoveryEvent",
+          "fullName": "hydrosphere.discovery.ServableDiscoveryEvent",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "removedIdx",
+              "description": "",
+              "label": "repeated",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "added",
+              "description": "",
+              "label": "repeated",
+              "type": "Servable",
+              "longType": "hydrosphere.manager.Servable",
+              "fullType": "hydrosphere.manager.Servable",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "ServingDiscovery",
+          "longName": "ServingDiscovery",
+          "fullName": "hydrosphere.discovery.ServingDiscovery",
+          "description": "",
+          "methods": [
+            {
+              "name": "WatchApplications",
+              "description": "",
+              "requestType": "Empty",
+              "requestLongType": ".google.protobuf.Empty",
+              "requestFullType": "google.protobuf.Empty",
+              "requestStreaming": true,
+              "responseType": "ApplicationDiscoveryEvent",
+              "responseLongType": "ApplicationDiscoveryEvent",
+              "responseFullType": "hydrosphere.discovery.ApplicationDiscoveryEvent",
+              "responseStreaming": true
+            },
+            {
+              "name": "WatchServables",
+              "description": "",
+              "requestType": "Empty",
+              "requestLongType": ".google.protobuf.Empty",
+              "requestFullType": "google.protobuf.Empty",
+              "requestStreaming": true,
+              "responseType": "ServableDiscoveryEvent",
+              "responseLongType": "ServableDiscoveryEvent",
+              "responseFullType": "hydrosphere.discovery.ServableDiscoveryEvent",
+              "responseStreaming": true
+            },
+            {
+              "name": "WatchMetricSpec",
+              "description": "",
+              "requestType": "Empty",
+              "requestLongType": ".google.protobuf.Empty",
+              "requestFullType": "google.protobuf.Empty",
+              "requestStreaming": true,
+              "responseType": "MetricSpecDiscoveryEvent",
+              "responseLongType": "MetricSpecDiscoveryEvent",
+              "responseFullType": "hydrosphere.discovery.MetricSpecDiscoveryEvent",
+              "responseStreaming": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hydro_serving_grpc/manager/api.proto",
+      "description": "",
+      "package": "hydrosphere.manager",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": true,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "DeployServableRequest",
+          "longName": "DeployServableRequest",
+          "fullName": "hydrosphere.manager.DeployServableRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "version_id",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "fullname",
+              "description": "",
+              "label": "",
+              "type": "ModelVersionIdentifier",
+              "longType": "ModelVersionIdentifier",
+              "fullType": "hydrosphere.manager.ModelVersionIdentifier",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "metadata",
+              "description": "",
+              "label": "repeated",
+              "type": "MetadataEntry",
+              "longType": "DeployServableRequest.MetadataEntry",
+              "fullType": "hydrosphere.manager.DeployServableRequest.MetadataEntry",
+              "ismap": true,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "MetadataEntry",
+          "longName": "DeployServableRequest.MetadataEntry",
+          "fullName": "hydrosphere.manager.DeployServableRequest.MetadataEntry",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "key",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "GetServablesRequest",
+          "longName": "GetServablesRequest",
+          "fullName": "hydrosphere.manager.GetServablesRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "filter",
+              "description": "",
+              "label": "",
+              "type": "ServableFilter",
+              "longType": "ServableFilter",
+              "fullType": "hydrosphere.manager.ServableFilter",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "GetVersionRequest",
+          "longName": "GetVersionRequest",
+          "fullName": "hydrosphere.manager.GetVersionRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "id",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ModelVersionIdentifier",
+          "longName": "ModelVersionIdentifier",
+          "fullName": "hydrosphere.manager.ModelVersionIdentifier",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "version",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "RemoveServableRequest",
+          "longName": "RemoveServableRequest",
+          "fullName": "hydrosphere.manager.RemoveServableRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "servable_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ServableFilter",
+          "longName": "ServableFilter",
+          "fullName": "hydrosphere.manager.ServableFilter",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "StringValue",
+              "longType": "google.protobuf.StringValue",
+              "fullType": "google.protobuf.StringValue",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "version_id",
+              "description": "",
+              "label": "",
+              "type": "Int64Value",
+              "longType": "google.protobuf.Int64Value",
+              "fullType": "google.protobuf.Int64Value",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "metadata",
+              "description": "",
+              "label": "repeated",
+              "type": "MetadataEntry",
+              "longType": "ServableFilter.MetadataEntry",
+              "fullType": "hydrosphere.manager.ServableFilter.MetadataEntry",
+              "ismap": true,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "MetadataEntry",
+          "longName": "ServableFilter.MetadataEntry",
+          "fullName": "hydrosphere.manager.ServableFilter.MetadataEntry",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "key",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "ManagerService",
+          "longName": "ManagerService",
+          "fullName": "hydrosphere.manager.ManagerService",
+          "description": "",
+          "methods": [
+            {
+              "name": "GetAllVersions",
+              "description": "",
+              "requestType": "Empty",
+              "requestLongType": ".google.protobuf.Empty",
+              "requestFullType": "google.protobuf.Empty",
+              "requestStreaming": false,
+              "responseType": "ModelVersion",
+              "responseLongType": "ModelVersion",
+              "responseFullType": "hydrosphere.manager.ModelVersion",
+              "responseStreaming": true
+            },
+            {
+              "name": "GetVersion",
+              "description": "",
+              "requestType": "GetVersionRequest",
+              "requestLongType": "GetVersionRequest",
+              "requestFullType": "hydrosphere.manager.GetVersionRequest",
+              "requestStreaming": false,
+              "responseType": "ModelVersion",
+              "responseLongType": "ModelVersion",
+              "responseFullType": "hydrosphere.manager.ModelVersion",
+              "responseStreaming": false
+            },
+            {
+              "name": "DeployServable",
+              "description": "",
+              "requestType": "DeployServableRequest",
+              "requestLongType": "DeployServableRequest",
+              "requestFullType": "hydrosphere.manager.DeployServableRequest",
+              "requestStreaming": false,
+              "responseType": "Servable",
+              "responseLongType": "Servable",
+              "responseFullType": "hydrosphere.manager.Servable",
+              "responseStreaming": true
+            },
+            {
+              "name": "GetServables",
+              "description": "",
+              "requestType": "GetServablesRequest",
+              "requestLongType": "GetServablesRequest",
+              "requestFullType": "hydrosphere.manager.GetServablesRequest",
+              "requestStreaming": false,
+              "responseType": "Servable",
+              "responseLongType": "Servable",
+              "responseFullType": "hydrosphere.manager.Servable",
+              "responseStreaming": true
+            },
+            {
+              "name": "RemoveServable",
+              "description": "",
+              "requestType": "RemoveServableRequest",
+              "requestLongType": "RemoveServableRequest",
+              "requestFullType": "hydrosphere.manager.RemoveServableRequest",
+              "requestStreaming": false,
+              "responseType": "Servable",
+              "responseLongType": "Servable",
+              "responseFullType": "hydrosphere.manager.Servable",
+              "responseStreaming": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hydro_serving_grpc/manager/applications.proto",
+      "description": "",
+      "package": "hydrosphere.manager",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "Application",
+          "longName": "Application",
+          "fullName": "hydrosphere.manager.Application",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "id",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "contract",
+              "description": "",
+              "label": "",
+              "type": "ModelContract",
+              "longType": "hydrosphere.contract.ModelContract",
+              "fullType": "hydrosphere.contract.ModelContract",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "execution_graph",
+              "description": "",
+              "label": "",
+              "type": "ExecutionGraph",
+              "longType": "ExecutionGraph",
+              "fullType": "hydrosphere.manager.ExecutionGraph",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "kafka_streaming",
+              "description": "",
+              "label": "repeated",
+              "type": "KafkaStreaming",
+              "longType": "KafkaStreaming",
+              "fullType": "hydrosphere.manager.KafkaStreaming",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "namespace",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "metadata",
+              "description": "",
+              "label": "repeated",
+              "type": "MetadataEntry",
+              "longType": "Application.MetadataEntry",
+              "fullType": "hydrosphere.manager.Application.MetadataEntry",
+              "ismap": true,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "MetadataEntry",
+          "longName": "Application.MetadataEntry",
+          "fullName": "hydrosphere.manager.Application.MetadataEntry",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "key",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ExecutionGraph",
+          "longName": "ExecutionGraph",
+          "fullName": "hydrosphere.manager.ExecutionGraph",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "stages",
+              "description": "",
+              "label": "repeated",
+              "type": "ExecutionStage",
+              "longType": "ExecutionStage",
+              "fullType": "hydrosphere.manager.ExecutionStage",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ExecutionService",
+          "longName": "ExecutionService",
+          "fullName": "hydrosphere.manager.ExecutionService",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "model_version",
+              "description": "",
+              "label": "",
+              "type": "ModelVersion",
+              "longType": "ModelVersion",
+              "fullType": "hydrosphere.manager.ModelVersion",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "weight",
+              "description": "",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ExecutionStage",
+          "longName": "ExecutionStage",
+          "fullName": "hydrosphere.manager.ExecutionStage",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "stage_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "signature",
+              "description": "",
+              "label": "",
+              "type": "ModelSignature",
+              "longType": "hydrosphere.contract.ModelSignature",
+              "fullType": "hydrosphere.contract.ModelSignature",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "services",
+              "description": "",
+              "label": "repeated",
+              "type": "ExecutionService",
+              "longType": "ExecutionService",
+              "fullType": "hydrosphere.manager.ExecutionService",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "KafkaStreaming",
+          "longName": "KafkaStreaming",
+          "fullName": "hydrosphere.manager.KafkaStreaming",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "consumer_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "source_topic",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "destination_topic",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "error_topic",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    },
+    {
+      "name": "hydro_serving_grpc/manager/entities.proto",
+      "description": "",
+      "package": "hydrosphere.manager",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [
+        {
+          "name": "ServableStatus",
+          "longName": "Servable.ServableStatus",
+          "fullName": "hydrosphere.manager.Servable.ServableStatus",
+          "description": "",
+          "values": [
+            {
+              "name": "NOT_SERVING",
+              "number": "0",
+              "description": ""
+            },
+            {
+              "name": "NOT_AVAILABlE",
+              "number": "1",
+              "description": ""
+            },
+            {
+              "name": "STARTING",
+              "number": "2",
+              "description": ""
+            },
+            {
+              "name": "SERVING",
+              "number": "3",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "name": "ApplicationStatus",
+          "longName": "ServingApp.ApplicationStatus",
+          "fullName": "hydrosphere.manager.ServingApp.ApplicationStatus",
+          "description": "",
+          "values": [
+            {
+              "name": "FAILED",
+              "number": "0",
+              "description": ""
+            },
+            {
+              "name": "ASSEMBLING",
+              "number": "1",
+              "description": ""
+            },
+            {
+              "name": "READY",
+              "number": "2",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "name": "CmpOp",
+          "longName": "ThresholdConfig.CmpOp",
+          "fullName": "hydrosphere.manager.ThresholdConfig.CmpOp",
+          "description": "",
+          "values": [
+            {
+              "name": "EQ",
+              "number": "0",
+              "description": ""
+            },
+            {
+              "name": "NOT_EQ",
+              "number": "1",
+              "description": ""
+            },
+            {
+              "name": "GREATER",
+              "number": "2",
+              "description": ""
+            },
+            {
+              "name": "LESS",
+              "number": "3",
+              "description": ""
+            },
+            {
+              "name": "GREATER_EQ",
+              "number": "4",
+              "description": ""
+            },
+            {
+              "name": "LESS_EQ",
+              "number": "5",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "CustomModelMetric",
+          "longName": "CustomModelMetric",
+          "fullName": "hydrosphere.manager.CustomModelMetric",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "monitor_model_id",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "threshold",
+              "description": "",
+              "label": "",
+              "type": "ThresholdConfig",
+              "longType": "ThresholdConfig",
+              "fullType": "hydrosphere.manager.ThresholdConfig",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "servable",
+              "description": "",
+              "label": "",
+              "type": "Servable",
+              "longType": "Servable",
+              "fullType": "hydrosphere.manager.Servable",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "DockerImage",
+          "longName": "DockerImage",
+          "fullName": "hydrosphere.manager.DockerImage",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "tag",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "HostSelector",
+          "longName": "HostSelector",
+          "fullName": "hydrosphere.manager.HostSelector",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "id",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "MetricSpec",
+          "longName": "MetricSpec",
+          "fullName": "hydrosphere.manager.MetricSpec",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "model_version_id",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "custom_model_config",
+              "description": "",
+              "label": "",
+              "type": "CustomModelMetric",
+              "longType": "CustomModelMetric",
+              "fullType": "hydrosphere.manager.CustomModelMetric",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Model",
+          "longName": "Model",
+          "fullName": "hydrosphere.manager.Model",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "id",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ModelVersion",
+          "longName": "ModelVersion",
+          "fullName": "hydrosphere.manager.ModelVersion",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "id",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "version",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "model_type",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "status",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "selector",
+              "description": "",
+              "label": "",
+              "type": "HostSelector",
+              "longType": "HostSelector",
+              "fullType": "hydrosphere.manager.HostSelector",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "model",
+              "description": "",
+              "label": "",
+              "type": "Model",
+              "longType": "Model",
+              "fullType": "hydrosphere.manager.Model",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "contract",
+              "description": "",
+              "label": "",
+              "type": "ModelContract",
+              "longType": "hydrosphere.contract.ModelContract",
+              "fullType": "hydrosphere.contract.ModelContract",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "image",
+              "description": "",
+              "label": "",
+              "type": "DockerImage",
+              "longType": "DockerImage",
+              "fullType": "hydrosphere.manager.DockerImage",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "image_sha",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "runtime",
+              "description": "",
+              "label": "",
+              "type": "DockerImage",
+              "longType": "DockerImage",
+              "fullType": "hydrosphere.manager.DockerImage",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "metadata",
+              "description": "",
+              "label": "repeated",
+              "type": "MetadataEntry",
+              "longType": "ModelVersion.MetadataEntry",
+              "fullType": "hydrosphere.manager.ModelVersion.MetadataEntry",
+              "ismap": true,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "MetadataEntry",
+          "longName": "ModelVersion.MetadataEntry",
+          "fullName": "hydrosphere.manager.ModelVersion.MetadataEntry",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "key",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Servable",
+          "longName": "Servable",
+          "fullName": "hydrosphere.manager.Servable",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "host",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "port",
+              "description": "",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "weight",
+              "description": "",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "model_version",
+              "description": "",
+              "label": "",
+              "type": "ModelVersion",
+              "longType": "ModelVersion",
+              "fullType": "hydrosphere.manager.ModelVersion",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "status",
+              "description": "",
+              "label": "",
+              "type": "ServableStatus",
+              "longType": "Servable.ServableStatus",
+              "fullType": "hydrosphere.manager.Servable.ServableStatus",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "status_message",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "metadata",
+              "description": "",
+              "label": "repeated",
+              "type": "MetadataEntry",
+              "longType": "Servable.MetadataEntry",
+              "fullType": "hydrosphere.manager.Servable.MetadataEntry",
+              "ismap": true,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "MetadataEntry",
+          "longName": "Servable.MetadataEntry",
+          "fullName": "hydrosphere.manager.Servable.MetadataEntry",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "key",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ServingApp",
+          "longName": "ServingApp",
+          "fullName": "hydrosphere.manager.ServingApp",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "contract",
+              "description": "",
+              "label": "",
+              "type": "ModelContract",
+              "longType": "hydrosphere.contract.ModelContract",
+              "fullType": "hydrosphere.contract.ModelContract",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "pipeline",
+              "description": "",
+              "label": "repeated",
+              "type": "Stage",
+              "longType": "Stage",
+              "fullType": "hydrosphere.manager.Stage",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "status",
+              "description": "",
+              "label": "",
+              "type": "ApplicationStatus",
+              "longType": "ServingApp.ApplicationStatus",
+              "fullType": "hydrosphere.manager.ServingApp.ApplicationStatus",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "status_message",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "metadata",
+              "description": "",
+              "label": "repeated",
+              "type": "MetadataEntry",
+              "longType": "ServingApp.MetadataEntry",
+              "fullType": "hydrosphere.manager.ServingApp.MetadataEntry",
+              "ismap": true,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "MetadataEntry",
+          "longName": "ServingApp.MetadataEntry",
+          "fullName": "hydrosphere.manager.ServingApp.MetadataEntry",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "key",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Stage",
+          "longName": "Stage",
+          "fullName": "hydrosphere.manager.Stage",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "stage_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "signature",
+              "description": "",
+              "label": "",
+              "type": "ModelSignature",
+              "longType": "hydrosphere.contract.ModelSignature",
+              "fullType": "hydrosphere.contract.ModelSignature",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "servable",
+              "description": "",
+              "label": "repeated",
+              "type": "Servable",
+              "longType": "Servable",
+              "fullType": "hydrosphere.manager.Servable",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ThresholdConfig",
+          "longName": "ThresholdConfig",
+          "fullName": "hydrosphere.manager.ThresholdConfig",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "double",
+              "longType": "double",
+              "fullType": "double",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "comparison",
+              "description": "",
+              "label": "",
+              "type": "CmpOp",
+              "longType": "ThresholdConfig.CmpOp",
+              "fullType": "hydrosphere.manager.ThresholdConfig.CmpOp",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    },
+    {
+      "name": "hydro_serving_grpc/kafka/kafka_messages.proto",
+      "description": "",
+      "package": "hydrosphere.manager",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "KafkaError",
+          "longName": "KafkaError",
+          "fullName": "hydrosphere.manager.KafkaError",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "error_message",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "last_known_request",
+              "description": "",
+              "label": "",
+              "type": "PredictRequest",
+              "longType": "hydrosphere.tensorflow.serving.PredictRequest",
+              "fullType": "hydrosphere.tensorflow.serving.PredictRequest",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "KafkaMessageLocation",
+          "longName": "KafkaMessageLocation",
+          "fullName": "hydrosphere.manager.KafkaMessageLocation",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "source_topic",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "consumer_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "offset",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "partition",
+              "description": "",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "KafkaMessageMeta",
+          "longName": "KafkaMessageMeta",
+          "fullName": "hydrosphere.manager.KafkaMessageMeta",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "trace_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "application_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "stage_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "stage_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "location",
+              "description": "",
+              "label": "",
+              "type": "KafkaMessageLocation",
+              "longType": "KafkaMessageLocation",
+              "fullType": "hydrosphere.manager.KafkaMessageLocation",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "KafkaServingMessage",
+          "longName": "KafkaServingMessage",
+          "fullName": "hydrosphere.manager.KafkaServingMessage",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "error",
+              "description": "",
+              "label": "",
+              "type": "KafkaError",
+              "longType": "KafkaError",
+              "fullType": "hydrosphere.manager.KafkaError",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "request",
+              "description": "",
+              "label": "",
+              "type": "PredictRequest",
+              "longType": "hydrosphere.tensorflow.serving.PredictRequest",
+              "fullType": "hydrosphere.tensorflow.serving.PredictRequest",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "meta",
+              "description": "",
+              "label": "",
+              "type": "KafkaMessageMeta",
+              "longType": "KafkaMessageMeta",
+              "fullType": "hydrosphere.manager.KafkaMessageMeta",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    },
+    {
+      "name": "hydro_serving_grpc/monitoring/api.proto",
+      "description": "",
+      "package": "hydrosphere.monitoring",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": true,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "ExecutionInformation",
+          "longName": "ExecutionInformation",
+          "fullName": "hydrosphere.monitoring.ExecutionInformation",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "request",
+              "description": "",
+              "label": "",
+              "type": "PredictRequest",
+              "longType": "hydrosphere.tensorflow.serving.PredictRequest",
+              "fullType": "hydrosphere.tensorflow.serving.PredictRequest",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "error",
+              "description": "",
+              "label": "",
+              "type": "ExecutionError",
+              "longType": "ExecutionError",
+              "fullType": "hydrosphere.monitoring.ExecutionError",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "response",
+              "description": "",
+              "label": "",
+              "type": "PredictResponse",
+              "longType": "hydrosphere.tensorflow.serving.PredictResponse",
+              "fullType": "hydrosphere.tensorflow.serving.PredictResponse",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "metadata",
+              "description": "",
+              "label": "",
+              "type": "ExecutionMetadata",
+              "longType": "ExecutionMetadata",
+              "fullType": "hydrosphere.monitoring.ExecutionMetadata",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "MonitoringService",
+          "longName": "MonitoringService",
+          "fullName": "hydrosphere.monitoring.MonitoringService",
+          "description": "",
+          "methods": [
+            {
+              "name": "Analyze",
+              "description": "",
+              "requestType": "ExecutionInformation",
+              "requestLongType": "ExecutionInformation",
+              "requestFullType": "hydrosphere.monitoring.ExecutionInformation",
+              "requestStreaming": false,
+              "responseType": "Empty",
+              "responseLongType": ".google.protobuf.Empty",
+              "responseFullType": "google.protobuf.Empty",
+              "responseStreaming": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hydro_serving_grpc/monitoring/metadata.proto",
+      "description": "",
+      "package": "hydrosphere.monitoring",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "ApplicationInfo",
+          "longName": "ApplicationInfo",
+          "fullName": "hydrosphere.monitoring.ApplicationInfo",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "application_id",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "stage_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ExecutionError",
+          "longName": "ExecutionError",
+          "fullName": "hydrosphere.monitoring.ExecutionError",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "error_message",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ExecutionMetadata",
+          "longName": "ExecutionMetadata",
+          "fullName": "hydrosphere.monitoring.ExecutionMetadata",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "modelVersion_id",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "signature_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "request_id",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "model_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "model_version",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "latency",
+              "description": "",
+              "label": "",
+              "type": "double",
+              "longType": "double",
+              "fullType": "double",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "trace_data",
+              "description": "",
+              "label": "",
+              "type": "TraceData",
+              "longType": "TraceData",
+              "fullType": "hydrosphere.monitoring.TraceData",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "app_info",
+              "description": "",
+              "label": "",
+              "type": "ApplicationInfo",
+              "longType": "ApplicationInfo",
+              "fullType": "hydrosphere.monitoring.ApplicationInfo",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "origin_trace_data",
+              "description": "",
+              "label": "",
+              "type": "TraceData",
+              "longType": "TraceData",
+              "fullType": "hydrosphere.monitoring.TraceData",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "TraceData",
+          "longName": "TraceData",
+          "fullName": "hydrosphere.monitoring.TraceData",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "ts",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "uid",
+              "description": "",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    },
+    {
+      "name": "hydro_serving_grpc/tf/tensor_shape.proto",
+      "description": "Protocol buffer representing the shape of tensors.",
+      "package": "hydrosphere.tensorflow",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "TensorShapeProto",
+          "longName": "TensorShapeProto",
+          "fullName": "hydrosphere.tensorflow.TensorShapeProto",
+          "description": "Dimensions of a tensor.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "dim",
+              "description": "Dimensions of the tensor, such as {\"input\", 30}, {\"output\", 40}\nfor a 30 x 40 2D tensor.  If an entry has size -1, this\ncorresponds to a dimension of unknown size. The names are\noptional.\n\nThe order of entries in \"dim\" matters: It indicates the layout of the\nvalues in the tensor in-memory representation.\n\nThe first entry in \"dim\" is the outermost dimension used to layout the\nvalues, the last entry is the innermost dimension.  This matches the\nin-memory layout of RowMajor Eigen tensors.\n\nIf \"dim.size()\" \u003e 0, \"unknown_rank\" must be false.",
+              "label": "repeated",
+              "type": "Dim",
+              "longType": "TensorShapeProto.Dim",
+              "fullType": "hydrosphere.tensorflow.TensorShapeProto.Dim",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "unknown_rank",
+              "description": "If true, the number of dimensions in the shape is unknown.\n\nIf true, \"dim.size()\" must be 0.",
+              "label": "",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "Dim",
+          "longName": "TensorShapeProto.Dim",
+          "fullName": "hydrosphere.tensorflow.TensorShapeProto.Dim",
+          "description": "One dimension of the tensor.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "size",
+              "description": "Size of the tensor in that dimension.\nThis value must be \u003e= -1, but values of -1 are reserved for \"unknown\"\nshapes (values of -1 mean \"unknown\" dimension).  Certain wrappers\nthat work with TensorShapeProto may fail at runtime when deserializing\na TensorShapeProto containing a dim value of -1.",
+              "label": "",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "name",
+              "description": "Optional name of the tensor dimension.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    },
+    {
+      "name": "hydro_serving_grpc/tf/types.proto",
+      "description": "",
+      "package": "hydrosphere.tensorflow",
+      "hasEnums": true,
+      "hasExtensions": false,
+      "hasMessages": false,
+      "hasServices": false,
+      "enums": [
+        {
+          "name": "DataType",
+          "longName": "DataType",
+          "fullName": "hydrosphere.tensorflow.DataType",
+          "description": "",
+          "values": [
+            {
+              "name": "DT_INVALID",
+              "number": "0",
+              "description": "Not a legal value for DataType.  Used to indicate a DataType field\nhas not been set."
+            },
+            {
+              "name": "DT_FLOAT",
+              "number": "1",
+              "description": "Data types that all computation devices are expected to be\ncapable to support."
+            },
+            {
+              "name": "DT_DOUBLE",
+              "number": "2",
+              "description": ""
+            },
+            {
+              "name": "DT_INT32",
+              "number": "3",
+              "description": ""
+            },
+            {
+              "name": "DT_UINT8",
+              "number": "4",
+              "description": ""
+            },
+            {
+              "name": "DT_INT16",
+              "number": "5",
+              "description": ""
+            },
+            {
+              "name": "DT_INT8",
+              "number": "6",
+              "description": ""
+            },
+            {
+              "name": "DT_STRING",
+              "number": "7",
+              "description": ""
+            },
+            {
+              "name": "DT_COMPLEX64",
+              "number": "8",
+              "description": "Single-precision complex"
+            },
+            {
+              "name": "DT_INT64",
+              "number": "9",
+              "description": ""
+            },
+            {
+              "name": "DT_BOOL",
+              "number": "10",
+              "description": ""
+            },
+            {
+              "name": "DT_QINT8",
+              "number": "11",
+              "description": "Quantized int8"
+            },
+            {
+              "name": "DT_QUINT8",
+              "number": "12",
+              "description": "Quantized uint8"
+            },
+            {
+              "name": "DT_QINT32",
+              "number": "13",
+              "description": "Quantized int32"
+            },
+            {
+              "name": "DT_BFLOAT16",
+              "number": "14",
+              "description": "Float32 truncated to 16 bits.  Only for cast ops."
+            },
+            {
+              "name": "DT_QINT16",
+              "number": "15",
+              "description": "Quantized int16"
+            },
+            {
+              "name": "DT_QUINT16",
+              "number": "16",
+              "description": "Quantized uint16"
+            },
+            {
+              "name": "DT_UINT16",
+              "number": "17",
+              "description": ""
+            },
+            {
+              "name": "DT_COMPLEX128",
+              "number": "18",
+              "description": "Double-precision complex"
+            },
+            {
+              "name": "DT_HALF",
+              "number": "19",
+              "description": ""
+            },
+            {
+              "name": "DT_RESOURCE",
+              "number": "20",
+              "description": ""
+            },
+            {
+              "name": "DT_VARIANT",
+              "number": "21",
+              "description": "Arbitrary C++ data types"
+            },
+            {
+              "name": "DT_UINT32",
+              "number": "22",
+              "description": ""
+            },
+            {
+              "name": "DT_UINT64",
+              "number": "23",
+              "description": ""
+            },
+            {
+              "name": "DT_MAP",
+              "number": "27",
+              "description": "Hydroserving map structure inside the tensor"
+            }
+          ]
+        }
+      ],
+      "extensions": [],
+      "messages": [],
+      "services": []
+    },
+    {
+      "name": "hydro_serving_grpc/tf/api/predict.proto",
+      "description": "",
+      "package": "hydrosphere.tensorflow.serving",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "PredictRequest",
+          "longName": "PredictRequest",
+          "fullName": "hydrosphere.tensorflow.serving.PredictRequest",
+          "description": "PredictRequest specifies which TensorFlow model to run, as well as\nhow inputs are mapped to tensors and how outputs are filtered before\nreturning to user.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "model_spec",
+              "description": "Model Specification.",
+              "label": "",
+              "type": "ModelSpec",
+              "longType": "ModelSpec",
+              "fullType": "hydrosphere.tensorflow.serving.ModelSpec",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "inputs",
+              "description": "Input tensors.\nNames of input tensor are alias names. The mapping from aliases to real\ninput tensor names is stored in the SavedModel export as a prediction\nSignatureDef under the 'inputs' field.",
+              "label": "repeated",
+              "type": "InputsEntry",
+              "longType": "PredictRequest.InputsEntry",
+              "fullType": "hydrosphere.tensorflow.serving.PredictRequest.InputsEntry",
+              "ismap": true,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "InputsEntry",
+          "longName": "PredictRequest.InputsEntry",
+          "fullName": "hydrosphere.tensorflow.serving.PredictRequest.InputsEntry",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "key",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "TensorProto",
+              "longType": "hydrosphere.tensorflow.TensorProto",
+              "fullType": "hydrosphere.tensorflow.TensorProto",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "PredictResponse",
+          "longName": "PredictResponse",
+          "fullName": "hydrosphere.tensorflow.serving.PredictResponse",
+          "description": "Response for PredictRequest on successful run.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "outputs",
+              "description": "Output tensors.",
+              "label": "repeated",
+              "type": "OutputsEntry",
+              "longType": "PredictResponse.OutputsEntry",
+              "fullType": "hydrosphere.tensorflow.serving.PredictResponse.OutputsEntry",
+              "ismap": true,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "OutputsEntry",
+          "longName": "PredictResponse.OutputsEntry",
+          "fullName": "hydrosphere.tensorflow.serving.PredictResponse.OutputsEntry",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "key",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "TensorProto",
+              "longType": "hydrosphere.tensorflow.TensorProto",
+              "fullType": "hydrosphere.tensorflow.TensorProto",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    },
+    {
+      "name": "hydro_serving_grpc/tf/api/prediction_service.proto",
+      "description": "",
+      "package": "tensorflow.serving",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": true,
+      "enums": [
+        {
+          "name": "ServiceStatus",
+          "longName": "StatusResponse.ServiceStatus",
+          "fullName": "tensorflow.serving.StatusResponse.ServiceStatus",
+          "description": "",
+          "values": [
+            {
+              "name": "UNKNOWN",
+              "number": "0",
+              "description": ""
+            },
+            {
+              "name": "SERVING",
+              "number": "1",
+              "description": ""
+            },
+            {
+              "name": "NOT_SERVING",
+              "number": "2",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "StatusResponse",
+          "longName": "StatusResponse",
+          "fullName": "tensorflow.serving.StatusResponse",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "status",
+              "description": "",
+              "label": "",
+              "type": "ServiceStatus",
+              "longType": "StatusResponse.ServiceStatus",
+              "fullType": "tensorflow.serving.StatusResponse.ServiceStatus",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "message",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "PredictionService",
+          "longName": "PredictionService",
+          "fullName": "tensorflow.serving.PredictionService",
+          "description": "",
+          "methods": [
+            {
+              "name": "Predict",
+              "description": "Execute model prediction",
+              "requestType": "PredictRequest",
+              "requestLongType": ".hydrosphere.tensorflow.serving.PredictRequest",
+              "requestFullType": "hydrosphere.tensorflow.serving.PredictRequest",
+              "requestStreaming": false,
+              "responseType": "PredictResponse",
+              "responseLongType": ".hydrosphere.tensorflow.serving.PredictResponse",
+              "responseFullType": "hydrosphere.tensorflow.serving.PredictResponse",
+              "responseStreaming": false
+            },
+            {
+              "name": "Status",
+              "description": "Ask for a status. Could contain explanation.",
+              "requestType": "Empty",
+              "requestLongType": ".google.protobuf.Empty",
+              "requestFullType": "google.protobuf.Empty",
+              "requestStreaming": false,
+              "responseType": "StatusResponse",
+              "responseLongType": "StatusResponse",
+              "responseFullType": "tensorflow.serving.StatusResponse",
+              "responseStreaming": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hydro_serving_grpc/tf/api/model.proto",
+      "description": "",
+      "package": "hydrosphere.tensorflow.serving",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "ModelSpec",
+          "longName": "ModelSpec",
+          "fullName": "hydrosphere.tensorflow.serving.ModelSpec",
+          "description": "Metadata for an inference request such as the model name and version.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "name",
+              "description": "Required servable name.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "version",
+              "description": "Optional version. If unspecified, will use the latest (numerical) version.\nTypically not needed unless coordinating across multiple models that were\nco-trained and/or have inter-dependencies on the versions used at inference\ntime.",
+              "label": "",
+              "type": "Int64Value",
+              "longType": "google.protobuf.Int64Value",
+              "fullType": "google.protobuf.Int64Value",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "signature_name",
+              "description": "A named signature to evaluate. If unspecified, the default signature will\nbe used.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    },
+    {
+      "name": "hydro_serving_grpc/tf/tensor.proto",
+      "description": "",
+      "package": "hydrosphere.tensorflow",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": false,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "MapTensorData",
+          "longName": "MapTensorData",
+          "fullName": "hydrosphere.tensorflow.MapTensorData",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "subtensors",
+              "description": "",
+              "label": "repeated",
+              "type": "SubtensorsEntry",
+              "longType": "MapTensorData.SubtensorsEntry",
+              "fullType": "hydrosphere.tensorflow.MapTensorData.SubtensorsEntry",
+              "ismap": true,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "SubtensorsEntry",
+          "longName": "MapTensorData.SubtensorsEntry",
+          "fullName": "hydrosphere.tensorflow.MapTensorData.SubtensorsEntry",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "key",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "TensorProto",
+              "longType": "TensorProto",
+              "fullType": "hydrosphere.tensorflow.TensorProto",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "TensorProto",
+          "longName": "TensorProto",
+          "fullName": "hydrosphere.tensorflow.TensorProto",
+          "description": "Protocol buffer representing a tensor.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "dtype",
+              "description": "",
+              "label": "",
+              "type": "DataType",
+              "longType": "DataType",
+              "fullType": "hydrosphere.tensorflow.DataType",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "tensor_shape",
+              "description": "Shape of the tensor.",
+              "label": "",
+              "type": "TensorShapeProto",
+              "longType": "TensorShapeProto",
+              "fullType": "hydrosphere.tensorflow.TensorShapeProto",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "version_number",
+              "description": "Version number.\n\nIn version 0, if the \"repeated xxx\" representations contain only one\nelement, that element is repeated to fill the shape.  This makes it easy\nto represent a constant Tensor with a single value.",
+              "label": "",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "tensor_content",
+              "description": "Serialized raw tensor content from either Tensor::AsProtoTensorContent or\nmemcpy in tensorflow::grpc::EncodeTensorToByteBuffer. This representation\ncan be used for all tensor types. The purpose of this representation is to\nreduce serialization overhead during RPC call by avoiding serialization of\nmany repeated small items.",
+              "label": "",
+              "type": "bytes",
+              "longType": "bytes",
+              "fullType": "bytes",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "half_val",
+              "description": "DT_HALF. Note that since protobuf has no int16 type, we'll have some\npointless zero padding for each value here.",
+              "label": "repeated",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "float_val",
+              "description": "DT_FLOAT.",
+              "label": "repeated",
+              "type": "float",
+              "longType": "float",
+              "fullType": "float",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "double_val",
+              "description": "DT_DOUBLE.",
+              "label": "repeated",
+              "type": "double",
+              "longType": "double",
+              "fullType": "double",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "int_val",
+              "description": "DT_INT32, DT_INT16, DT_INT8, DT_UINT8.",
+              "label": "repeated",
+              "type": "int32",
+              "longType": "int32",
+              "fullType": "int32",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "string_val",
+              "description": "DT_STRING",
+              "label": "repeated",
+              "type": "bytes",
+              "longType": "bytes",
+              "fullType": "bytes",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "scomplex_val",
+              "description": "DT_COMPLEX64. scomplex_val(2*i) and scomplex_val(2*i+1) are real\nand imaginary parts of i-th single precision complex.",
+              "label": "repeated",
+              "type": "float",
+              "longType": "float",
+              "fullType": "float",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "int64_val",
+              "description": "DT_INT64",
+              "label": "repeated",
+              "type": "int64",
+              "longType": "int64",
+              "fullType": "int64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "bool_val",
+              "description": "DT_BOOL",
+              "label": "repeated",
+              "type": "bool",
+              "longType": "bool",
+              "fullType": "bool",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "dcomplex_val",
+              "description": "DT_COMPLEX128. dcomplex_val(2*i) and dcomplex_val(2*i+1) are real\nand imaginary parts of i-th double precision complex.",
+              "label": "repeated",
+              "type": "double",
+              "longType": "double",
+              "fullType": "double",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "variant_val",
+              "description": "DT_VARIANT",
+              "label": "repeated",
+              "type": "VariantTensorDataProto",
+              "longType": "VariantTensorDataProto",
+              "fullType": "hydrosphere.tensorflow.VariantTensorDataProto",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "uint32_val",
+              "description": "DT_UINT32",
+              "label": "repeated",
+              "type": "uint32",
+              "longType": "uint32",
+              "fullType": "uint32",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "uint64_val",
+              "description": "DT_UINT64",
+              "label": "repeated",
+              "type": "uint64",
+              "longType": "uint64",
+              "fullType": "uint64",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "map_val",
+              "description": "Hydroserving",
+              "label": "repeated",
+              "type": "MapTensorData",
+              "longType": "MapTensorData",
+              "fullType": "hydrosphere.tensorflow.MapTensorData",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "VariantTensorDataProto",
+          "longName": "VariantTensorDataProto",
+          "fullName": "hydrosphere.tensorflow.VariantTensorDataProto",
+          "description": "Protocol buffer representing the serialization format of DT_VARIANT tensors.",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "type_name",
+              "description": "Name of the type of objects being serialized.",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "metadata",
+              "description": "Portions of the object that are not Tensors.",
+              "label": "",
+              "type": "bytes",
+              "longType": "bytes",
+              "fullType": "bytes",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "tensors",
+              "description": "Tensors contained within objects being serialized.",
+              "label": "repeated",
+              "type": "TensorProto",
+              "longType": "TensorProto",
+              "fullType": "hydrosphere.tensorflow.TensorProto",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": []
+    },
+    {
+      "name": "hydro_serving_grpc/gateway/api.proto",
+      "description": "",
+      "package": "hydrosphere.serving.gateway",
+      "hasEnums": false,
+      "hasExtensions": false,
+      "hasMessages": true,
+      "hasServices": true,
+      "enums": [],
+      "extensions": [],
+      "messages": [
+        {
+          "name": "ExecutorIdentifier",
+          "longName": "ExecutorIdentifier",
+          "fullName": "hydrosphere.serving.gateway.ExecutorIdentifier",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "servable_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "application_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ReplayRequest",
+          "longName": "ReplayRequest",
+          "fullName": "hydrosphere.serving.gateway.ReplayRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "servable_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "data",
+              "description": "",
+              "label": "repeated",
+              "type": "DataEntry",
+              "longType": "ReplayRequest.DataEntry",
+              "fullType": "hydrosphere.serving.gateway.ReplayRequest.DataEntry",
+              "ismap": true,
+              "defaultValue": ""
+            },
+            {
+              "name": "origin_td",
+              "description": "",
+              "label": "",
+              "type": "TraceData",
+              "longType": "hydrosphere.monitoring.TraceData",
+              "fullType": "hydrosphere.monitoring.TraceData",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "DataEntry",
+          "longName": "ReplayRequest.DataEntry",
+          "fullName": "hydrosphere.serving.gateway.ReplayRequest.DataEntry",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "key",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "TensorProto",
+              "longType": "hydrosphere.tensorflow.TensorProto",
+              "fullType": "hydrosphere.tensorflow.TensorProto",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "ServablePredictRequest",
+          "longName": "ServablePredictRequest",
+          "fullName": "hydrosphere.serving.gateway.ServablePredictRequest",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "servable_name",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "data",
+              "description": "",
+              "label": "repeated",
+              "type": "DataEntry",
+              "longType": "ServablePredictRequest.DataEntry",
+              "fullType": "hydrosphere.serving.gateway.ServablePredictRequest.DataEntry",
+              "ismap": true,
+              "defaultValue": ""
+            }
+          ]
+        },
+        {
+          "name": "DataEntry",
+          "longName": "ServablePredictRequest.DataEntry",
+          "fullName": "hydrosphere.serving.gateway.ServablePredictRequest.DataEntry",
+          "description": "",
+          "hasExtensions": false,
+          "hasFields": true,
+          "extensions": [],
+          "fields": [
+            {
+              "name": "key",
+              "description": "",
+              "label": "",
+              "type": "string",
+              "longType": "string",
+              "fullType": "string",
+              "ismap": false,
+              "defaultValue": ""
+            },
+            {
+              "name": "value",
+              "description": "",
+              "label": "",
+              "type": "TensorProto",
+              "longType": "hydrosphere.tensorflow.TensorProto",
+              "fullType": "hydrosphere.tensorflow.TensorProto",
+              "ismap": false,
+              "defaultValue": ""
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "name": "GatewayService",
+          "longName": "GatewayService",
+          "fullName": "hydrosphere.serving.gateway.GatewayService",
+          "description": "Extensions to the PredictionService API for a gateway",
+          "methods": [
+            {
+              "name": "ReplayModel",
+              "description": "Makes prediction with specified date",
+              "requestType": "ReplayRequest",
+              "requestLongType": "ReplayRequest",
+              "requestFullType": "hydrosphere.serving.gateway.ReplayRequest",
+              "requestStreaming": false,
+              "responseType": "PredictResponse",
+              "responseLongType": ".hydrosphere.tensorflow.serving.PredictResponse",
+              "responseFullType": "hydrosphere.tensorflow.serving.PredictResponse",
+              "responseStreaming": false
+            },
+            {
+              "name": "PredictServable",
+              "description": "Send prediction request to specified servable.Sends data to shadow.",
+              "requestType": "ServablePredictRequest",
+              "requestLongType": "ServablePredictRequest",
+              "requestFullType": "hydrosphere.serving.gateway.ServablePredictRequest",
+              "requestStreaming": false,
+              "responseType": "PredictResponse",
+              "responseLongType": ".hydrosphere.tensorflow.serving.PredictResponse",
+              "responseFullType": "hydrosphere.tensorflow.serving.PredictResponse",
+              "responseStreaming": false
+            },
+            {
+              "name": "ShadowlessPredictServable",
+              "description": "Makes prediction but doesn't send it to shadow",
+              "requestType": "ServablePredictRequest",
+              "requestLongType": "ServablePredictRequest",
+              "requestFullType": "hydrosphere.serving.gateway.ServablePredictRequest",
+              "requestStreaming": false,
+              "responseType": "PredictResponse",
+              "responseLongType": ".hydrosphere.tensorflow.serving.PredictResponse",
+              "responseFullType": "hydrosphere.tensorflow.serving.PredictResponse",
+              "responseStreaming": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scalarValueTypes": [
+    {
+      "protoType": "double",
+      "notes": "",
+      "cppType": "double",
+      "csType": "double",
+      "goType": "float64",
+      "javaType": "double",
+      "phpType": "float",
+      "pythonType": "float",
+      "rubyType": "Float"
+    },
+    {
+      "protoType": "float",
+      "notes": "",
+      "cppType": "float",
+      "csType": "float",
+      "goType": "float32",
+      "javaType": "float",
+      "phpType": "float",
+      "pythonType": "float",
+      "rubyType": "Float"
+    },
+    {
+      "protoType": "int32",
+      "notes": "Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint32 instead.",
+      "cppType": "int32",
+      "csType": "int",
+      "goType": "int32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "int64",
+      "notes": "Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint64 instead.",
+      "cppType": "int64",
+      "csType": "long",
+      "goType": "int64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "uint32",
+      "notes": "Uses variable-length encoding.",
+      "cppType": "uint32",
+      "csType": "uint",
+      "goType": "uint32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int/long",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "uint64",
+      "notes": "Uses variable-length encoding.",
+      "cppType": "uint64",
+      "csType": "ulong",
+      "goType": "uint64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "sint32",
+      "notes": "Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int32s.",
+      "cppType": "int32",
+      "csType": "int",
+      "goType": "int32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "sint64",
+      "notes": "Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int64s.",
+      "cppType": "int64",
+      "csType": "long",
+      "goType": "int64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "fixed32",
+      "notes": "Always four bytes. More efficient than uint32 if values are often greater than 2^28.",
+      "cppType": "uint32",
+      "csType": "uint",
+      "goType": "uint32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "fixed64",
+      "notes": "Always eight bytes. More efficient than uint64 if values are often greater than 2^56.",
+      "cppType": "uint64",
+      "csType": "ulong",
+      "goType": "uint64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "sfixed32",
+      "notes": "Always four bytes.",
+      "cppType": "int32",
+      "csType": "int",
+      "goType": "int32",
+      "javaType": "int",
+      "phpType": "integer",
+      "pythonType": "int",
+      "rubyType": "Bignum or Fixnum (as required)"
+    },
+    {
+      "protoType": "sfixed64",
+      "notes": "Always eight bytes.",
+      "cppType": "int64",
+      "csType": "long",
+      "goType": "int64",
+      "javaType": "long",
+      "phpType": "integer/string",
+      "pythonType": "int/long",
+      "rubyType": "Bignum"
+    },
+    {
+      "protoType": "bool",
+      "notes": "",
+      "cppType": "bool",
+      "csType": "bool",
+      "goType": "bool",
+      "javaType": "boolean",
+      "phpType": "boolean",
+      "pythonType": "boolean",
+      "rubyType": "TrueClass/FalseClass"
+    },
+    {
+      "protoType": "string",
+      "notes": "A string must always contain UTF-8 encoded or 7-bit ASCII text.",
+      "cppType": "string",
+      "csType": "string",
+      "goType": "string",
+      "javaType": "String",
+      "phpType": "string",
+      "pythonType": "str/unicode",
+      "rubyType": "String (UTF-8)"
+    },
+    {
+      "protoType": "bytes",
+      "notes": "May contain any arbitrary sequence of bytes.",
+      "cppType": "string",
+      "csType": "ByteString",
+      "goType": "[]byte",
+      "javaType": "ByteString",
+      "phpType": "string",
+      "pythonType": "str",
+      "rubyType": "String (ASCII-8BIT)"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+<scalastyle commentFilter="enabled">
+    <name>Scalastyle standard configuration</name>
+    <check level="warning" class="org.scalastyle.file.FileTabChecker" enabled="true" />
+    <check enabled="true" class="org.scalastyle.scalariform.NotImplementedErrorUsage" level="warning"/>
+    <check enabled="true" class="org.scalastyle.scalariform.NullChecker" level="warning">
+        <parameters>
+            <parameter name="allowNullChecks">true</parameter>
+        </parameters>
+    </check>
+</scalastyle>
