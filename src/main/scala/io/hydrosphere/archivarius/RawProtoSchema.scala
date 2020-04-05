@@ -3,7 +3,7 @@
   *
   * Schema is created by protoc compiler plugin https://github.com/pseudomuto/protoc-gen-doc
   */
-package io.hydrosphere.archivarius.proto.plugin_schema
+package io.hydrosphere.archivarius
 
 import cats.effect.Sync
 import cats.implicits._
@@ -93,7 +93,7 @@ import io.hydrosphere.archivarius.util.Resources
 object RawProtoSchema {
   def readJson[F[_]](path: String)(implicit F: Sync[F], logger: Logger[F]): F[RawProtoSchema] = {
     for {
-      jsonText <- Resources.sourceFromFile(path).use(x => F.delay(x.mkString))
+      jsonText <- Resources.sourceFromPath(path).use(x => F.delay(x.mkString))
       _        <- logger.debug(s"Read ${path}")
       json     <- F.fromEither(parse(jsonText))
       _        <- logger.debug(s"Parsed json ${path}")

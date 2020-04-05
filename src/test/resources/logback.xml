@@ -13,6 +13,10 @@
         <appender-ref ref="CONSOLE"/>
     </logger>
 
+    <logger name="com.lightbend.paradox" level="debug" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
     <root level="error">
         <appender-ref ref="CONSOLE"/>
     </root>

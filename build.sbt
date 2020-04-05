@@ -1,8 +1,5 @@
-lazy val paradox = project.in(file("paradox"))
-
 lazy val archivarius = project
   .in(file("."))
-  .dependsOn(paradox)
   .settings(
     name := "archivarius",
     version := "0.1.0",

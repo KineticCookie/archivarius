@@ -1,7 +1,6 @@
 package io.hydrosphere.archivarius
 
 import cats.effect.IO
-import io.hydrosphere.archivarius.proto.plugin_schema.RawProtoSchema
 
 class RawProtoSchemaTest extends UnitSpec {
   test("ProtoSchema should be parsed from json") {

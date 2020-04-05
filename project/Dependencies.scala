@@ -27,5 +27,11 @@ object Dependencies {
     "org.scalatest" %% "scalatest" % "3.1.1" % "test"
   )
 
-  val all = cats ++ circe ++ logs ++ test
+  val paradox = Seq(
+    "org.pegdown"   % "pegdown"        % "1.6.0",
+    "org.parboiled" % "parboiled-java" % "1.3.0", // overwrite for JDK10 support
+    "org.antlr"     % "ST4"            % "4.1"
+  )
+
+  val all = cats ++ circe ++ logs ++ paradox ++ test
 }

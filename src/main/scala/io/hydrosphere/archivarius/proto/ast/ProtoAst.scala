@@ -1,6 +1,6 @@
 package io.hydrosphere.archivarius.proto.ast
 
-import io.hydrosphere.archivarius.proto.plugin_schema.RawProtoSchema
+import io.hydrosphere.archivarius.RawProtoSchema
 
 trait ProtoType
 
